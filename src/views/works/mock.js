@@ -1,0 +1,39 @@
+const data = [
+    {
+        id: '1',
+        title: 'pink',
+        desc: 'pink2',
+        code: "const Builder = require('@dever/low-code-builder')\nconst ReactModel = require('@dever/low-code-builder/dist/react')\nnew Builder(ReactModel, {\n    id: 'works-wrapper-4',\n    componentType: 'Wrapper',\n    props: {\n        $$isCustom: true,\n        style: {\n            background: 'pink',\n            height: '100%',\n            width: '100%',\n            borderRadius: '8px 8px 0 0'\n        }\n    },\n})",
+    },
+    {
+        id: '2',
+        title: 'red',
+        desc: 'red',
+        code: "const Builder = require('@dever/low-code-builder')\r\nconst ReactModel = require('@dever/low-code-builder/dist/react')\r\nnew Builder(ReactModel, {\r\n    id: 'works-wrapper-1',\r\n    componentType: 'Wrapper',\r\n    props: {\r\n        $$isCustom: true,\r\n        style: {\r\n            background: 'red',\r\n            height: '100%',\r\n            borderRadius: '8px 8px 0 0'\r\n        }\r\n    },\r\n})",
+    },
+    {
+        id: '3',
+        title: 'blue',
+        desc: 'blue',
+        code: "const Builder = require('@dever/low-code-builder')\r\nconst ReactModel = require('@dever/low-code-builder/dist/react')\r\nnew Builder(ReactModel, {\r\n    id: 'works-wrapper-2',\r\n    componentType: 'Wrapper',\r\n    props: {\r\n        $$isCustom: true,\r\n        style: {\r\n            background: 'blue',\r\n            height: '100%',\r\n            borderRadius: '8px 8px 0 0'\r\n        }\r\n    },\r\n})",
+    },
+    {
+        id: '4',
+        title: 'yellow',
+        desc: 'yellow',
+        code: "const Builder = require('@dever/low-code-builder')\r\nconst ReactModel = require('@dever/low-code-builder/dist/react')\r\nnew Builder(ReactModel, {\r\n    id: 'works-wrapper-3',\r\n    componentType: 'Wrapper',\r\n    props: {\r\n        $$isCustom: true,\r\n        style: {\r\n            background: 'yellow',\r\n            height: '100%',\r\n            borderRadius: '8px 8px 0 0'\r\n        }\r\n    },\r\n})",
+    },
+    {
+        id: '5',
+        title: '66',
+        desc: '66666',
+        code: "(function () {\r\n    const antd = require('antd')\r\n    const Builder = require('@dever/low-code-builder')\r\n    const ReactModel = require('@dever/low-code-builder/dist/react')\r\n    const { Layout } = antd\r\n    const { Header, Content, Footer } = Layout\r\n\r\n    const config = {\r\n        id: 'wrapper',\r\n        componentType: 'Layout',\r\n        props: {\r\n            className: 'wrapper',\r\n        },\r\n        children: [\r\n            {\r\n                id: 'site-layout',\r\n                componentType: 'Layout',\r\n                props: {\r\n                    className: 'site-layout',\r\n                },\r\n                children: [\r\n                    {\r\n                        id: 'header',\r\n                        componentType: 'Header',\r\n                        props: {\r\n                            style: {\r\n                                background: 'red',\r\n                                paddingLeft: '0',\r\n                            },\r\n                        },\r\n\r\n                    },\r\n                    {\r\n                        id: 'content',\r\n                        componentType: 'Content',\r\n                        props: {\r\n                            style: {\r\n                                border: '1px solid red'\r\n                            }\r\n                        }\r\n                    },\r\n                    {\r\n                        id: 'footer',\r\n                        componentType: 'Footer',\r\n                        props: {\r\n                            style: {\r\n                                background: 'blue',\r\n                            },\r\n                        },\r\n                    }\r\n                ],\r\n            },\r\n        ],\r\n    }\r\n    const builder = new Builder(ReactModel, config)\r\n\r\n\r\n    builder.registerComponent({\r\n        Layout,\r\n        Header,\r\n        Content,\r\n        Footer,\r\n    })\r\n    return builder\r\n}())",
+    },
+    {
+        id: 'login',
+        title: '登录页面',
+        desc: '普通的登录页面',
+        code: '(function () {\r\n\r\n    const React = require(\'react\')\r\n    const { LockOutlined, UserOutlined } = require(\'@ant-design/icons\')\r\n    const { Button, Checkbox, Form, Input } = require(\'antd\')\r\n\r\n    function Style() {\r\n        return <style>{`.login-wrapper {\r\n    position: relative;\r\n    overflow: hidden;\r\n    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);\r\n    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);\r\n    background: #fff;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-pack: center;\r\n    justify-content: center;\r\n}`}</style>\r\n    }\r\n\r\n    function Login() {\r\n        const onFinish = (values) => {\r\n            console.log(\'Received values of form: \', values);\r\n        };\r\n\r\n        return (\r\n            <>\r\n                <Style />\r\n                <div className=\'login-wrapper\'>\r\n                    <Form\r\n                        name="normal_login"\r\n                        className="login-form"\r\n                        initialValues={{ remember: true }}\r\n                        onFinish={onFinish}\r\n                    >\r\n                        <Form.Item\r\n                            name="username"\r\n                            rules={[{ required: true, message: \'Please input your Username!\' }]}\r\n                        >\r\n                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />\r\n                        </Form.Item>\r\n                        <Form.Item\r\n                            name="password"\r\n                            rules={[{ required: true, message: \'Please input your Password!\' }]}\r\n                        >\r\n                            <Input\r\n                                prefix={<LockOutlined className="site-form-item-icon" />}\r\n                                type="password"\r\n                                placeholder="Password"\r\n                            />\r\n                        </Form.Item>\r\n                        <Form.Item>\r\n                            <Form.Item name="remember" valuePropName="checked" noStyle>\r\n                                <Checkbox>Remember me</Checkbox>\r\n                            </Form.Item>\r\n\r\n                            <a className="login-form-forgot" href="">\r\n                                Forgot password\r\n                            </a>\r\n                        </Form.Item>\r\n\r\n                        <Form.Item>\r\n                            <Button type="primary" htmlType="submit" className="login-form-button">\r\n                                Log in\r\n                            </Button>\r\n                            Or <a href="">register now!</a>\r\n                        </Form.Item>\r\n                    </Form>\r\n                </div >\r\n            </>\r\n        );\r\n    };\r\n    const Builder = require(\'@dever/low-code-builder\')\r\n    const ReactModel = require(\'@dever/low-code-builder/dist/react\')\r\n    const builder = new Builder(ReactModel, {\r\n        id: \'login-wrapper\',\r\n        componentType: \'Wrapper\',\r\n        props: {\r\n            $$isCustom: true,\r\n            style: {\r\n                height: \'100%\',\r\n                width: \'100%\'\r\n            }\r\n        },\r\n        children: [{\r\n            id: \'login\',\r\n            componentType: \'Login\'\r\n        }]\r\n    })\r\n    builder.registerComponent({ Login })\r\n    return builder\r\n})()',
+    },
+]
+export default data
